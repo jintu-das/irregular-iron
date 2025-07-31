@@ -1,0 +1,23 @@
+---
+import Social from "./Social.astro";
+
+const email = "contact@auditrol.com";
+---
+
+<footer class="text-center pb-5">
+  <p>
+    © 2025 Auditrol, Inc. All rights reserved <a
+      class="text-blue-600 italic"
+      href={`mailto:${email}`}>{email}</a
+    >!
+  </p>
+
+  <ul class="flex items-center justify-center gap-3">
+    <li>
+      <Social platform="Linkedin" username="astrodotbuild" />
+    </li>
+    <li>
+      <Social platform="Youtube" username="astrodotbuild" />
+    </li>
+  </ul>
+</footer>

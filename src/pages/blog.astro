@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true })
+);
+
+const title = "Blog Page";
+---
+
+<Layout title={title}>
+  <header class="space-y-1">
+    <h1 class="font-medium text-2xl">From the Blog</h1>
+    <p>Learn how to grow your business with our expert advice.</p>
+  </header>
+
+  <ul class="underline mt-4 list-disc list-inside space-y-3">
+    {
+      allPosts.map((post: any) => (
+        <li>
+          <a class="text-slate-800" href={post.url}>
+            {post.frontmatter.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

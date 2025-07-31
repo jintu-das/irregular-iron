@@ -1,0 +1,15 @@
+---
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="max-w-none p-4 prose prose-sm prose-img:w-full">
+    <h1 class="text-4xl font-semibold text-balance">{frontmatter.title}</h1>
+    <p>🗓 {frontmatter.pubDate.toString().slice(0, 10)}</p>
+    <p>✒ {frontmatter.author}</p>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+    <slot />
+  </article>
+</Layout>
