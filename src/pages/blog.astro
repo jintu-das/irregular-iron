@@ -18,7 +18,7 @@ const title = "Blog Page";
     {
       allPosts.map((post: any) => (
         <li>
-          <a class="text-slate-800" href={post.url}>
+          <a class="text-slate-800" href={post.url} data-astro-prefetch>
             {post.frontmatter.title}
           </a>
         </li>

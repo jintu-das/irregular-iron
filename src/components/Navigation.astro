@@ -21,6 +21,7 @@ const NAVIGATION_LINKS = [
             <a
               class={`${currentPath === link.href ? "font-medium" : "font-normal text-slate-500"}`}
               href={link.href}
+              data-astro-prefetch
             >
               {link.label}
             </a>
