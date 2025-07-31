@@ -10,5 +10,6 @@ export default defineConfig({
   },
   site: "https://stirring-custard-9ea6bb.netlify.app",
   trailingSlash: "never",
+  prefetch: true,
   integrations: [sitemap()],
 });
