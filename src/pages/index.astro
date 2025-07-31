@@ -1,12 +1,101 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { YouTube } from "@astro-community/astro-embed-youtube";
+
+const src = "https://www.youtube.com/embed/piXY6Rm9MZw?si=2EaiVvIV7pwuWqg5";
 ---
 
 <Layout title="Home Page">
-  <h1 class="font-medium text-xl">Home Page</h1>
-  <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit ullam
-    voluptatibus eaque. Dolore, iste fuga! Nisi exercitationem nam repellendus
-    optio ducimus quo veniam perspiciatis corrupti. Ad beatae nam ipsam ab.
-  </p>
+  <section class="space-y-1">
+    <h1 class="font-medium text-2xl">Control Your Future</h1>
+    <p>
+      <em>Auditrol</em> revolutionizes risk management with AI, proactively mitigating
+      regulatory and data risks for financial institutions.
+    </p>
+  </section>
+
+  <YouTube
+    title="Auditrol Product Brief"
+    id={src}
+    posterQuality="max"
+    class="rounded-2xl"
+  />
+
+  <section class="space-y-2">
+    <h2 class="text-xl font-medium">Why Choose Auditrol</h2>
+    <p>
+      Harness the power of technology and industry expertise knowledge to stay
+      ahead of compliance and risk management.
+    </p>
+  </section>
+
+  <section class="space-y-2">
+    <h3 class="text-lg font-medium">Automation and Programmability</h3>
+    <p>
+      Identifying software vulnerabilities early on during development is a
+      standard practice, but detecting risk with newly created data assets
+      doesn't exist today.
+    </p>
+    <p>
+      Auditrol addresses the gap by providing a software development kit (SDK)
+      that allows engineers and data scientists to identify risks and remediate
+      potential gaps in automated workflows.
+    </p>
+  </section>
+
+  <section class="space-y-2">
+    <h4 class="text-lg font-medium">Financial Services Industry Focus</h4>
+    <p>
+      We are experts in data risk management for financial services. Our deep
+      understanding of business processes and ownership across business, IT, and
+      line-of-defense (LOD) approval process allows us to collaborate to address
+      your challenges.
+    </p>
+  </section>
+
+  <section class="space-y-2">
+    <h4 class="text-lg font-medium">Flexible Deployment</h4>
+    <p>
+      Choose from SaaS, Your Cloud VPC, or Hybrid (Your Cloud VPC + On-Premise
+      Data Collection Container) deployment options.
+    </p>
+  </section>
+
+  <section class="space-y-2">
+    <h5 class="text-lg font-medium">Regulatory Knowledge</h5>
+    <p>
+      Harness the power of Generative AI to distill complex regulations into
+      comprehensible summaries and recommended controls.
+    </p>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Improve regulatory knowledge with our Q&A chatbot.</li>
+
+      <li>
+        Review recommended controls across regulations and industry frameworks
+        such as BCBS 239, FFIEC, and EDM.
+      </li>
+
+      <li>
+        Trust and verify AI output with data privacy, domain knowledge, and
+        contextually aware system prompts.
+      </li>
+
+      <li>Bring your policies to our chatbot in a privacy safe way.</li>
+    </ul>
+  </section>
+
+  <section class="space-y-2">
+    <h5 class="text-lg font-medium">Business Process</h5>
+    <p>Contextualize risks with business processes.</p>
+
+    <ul class="list-disc list-inside space-y-2">
+      <li>Define the "why" and "relevance" of controls.</li>
+      <li>Identify critical data elements (CDEs) and data catalogs.</li>
+      <li>
+        Increase collaboration among stakeholders during design and approval
+        processes.
+      </li>
+      <li>Monitor compliance with automated attestation alerts.</li>
+    </ul>
+  </section>
 </Layout>

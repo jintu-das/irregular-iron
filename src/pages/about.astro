@@ -1,58 +1,44 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
 ---
 
-<Layout title="About Page">
-  <header>
-    <h1 class="font-medium text-xl">About Page</h1>
-    <p>Here are a few facts about me:</p>
-  </header>
-  <ul class="list-disc list-inside">
-    <li>My name is {identity.firstName}.</li>
-    <li>
-      I live in {identity.country} and I work as a {identity.occupation}.
-    </li>
-    {
-      identity.hobbies.length >= 2 && (
-        <li>
-          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-        </li>
-      )
-    }
-  </ul>
-  <p>My skills are:</p>
-  <ul class="flex items-center gap-3">
-    {
-      skills.map((skill) => (
-        <li class="rounded-2xl bg-slate-200 text-sm font-medium px-3 py-1">
-          {skill}
-        </li>
-      ))
-    }
-  </ul>
+<Layout title="About">
+  <section class="space-y-2">
+    <h1 class="font-medium text-2xl">About Us</h1>
 
-  {happy && <p>I am happy to be learning Astro!</p>}
+    <p>
+      “Control Your Future” is more than just a tagline for us. It perfectly
+      aligns with our mission to empower our customers with the tools they need
+      to take control of their risk management.
+    </p>
 
-  {finished && <p>I finished this tutorial!</p>}
+    <p>
+      We are the only platform that fosters collaboration across departments and
+      drives risk automation with business context. As practitioners of data
+      risk management, we recognized the need for a solution that truly
+      understands the day-to-day challenges of users. This passion is what
+      inspired the creation of Auditrol.
+    </p>
+  </section>
 
-  {
-    goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
-    ) : (
-      <p>My goal is not 3 days.</p>
-    )
-  }
+  <section class="space-y-2">
+    <h2 class="text-xl font-medium">Our Story</h2>
+    <p>
+      Our founders, bringing together decades of expertise in product,
+      engineering, and banking, recognized a critical challenge: banks were
+      struggling to meet regulatory commitments while maintaining day-to-day
+      operations. Drawing on their collective experience from successful startup
+      exits, they decided to embark on the entrepreneurial journey once again.
+    </p>
+  </section>
+
+  <section class="space-y-2">
+    <h3 class="text-xl font-medium">Our Culture</h3>
+    <p>
+      Innovation drives our approach when focusing on customers. We see
+      challenges as growth opportunities, transforming ideas into products
+      through excellent execution. Our ethos centers on transparency and mutual
+      respect.
+    </p>
+  </section>
 </Layout>
