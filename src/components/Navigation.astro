@@ -1,10 +1,33 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+const currentPath = Astro.url.pathname;
+
+const NAVIGATION_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
+];
+---
+
 <header>
   <nav class="py-4 flex items-center justify-between">
+    <Image width="40" height="40" src={logo} alt="Auditrol logo" />
+
     <ul class="flex items-center gap-4">
-      <li><a class="font-medium" href="/">Home</a></li>
-      <li><a class="font-medium" href="/about">About</a></li>
-      <li><a class="font-medium" href="/blog">Blog</a></li>
+      {
+        NAVIGATION_LINKS.map((link) => (
+          <li>
+            <a
+              class={`${currentPath === link.href ? "font-medium" : "font-normal text-slate-500"}`}
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
-    <a href="#" class="font-medium text-sm to-blue-600">Request a Demo</a>
+    <a href="#" class="underline text-sm text-blue-600">Request a Demo</a>
   </nav>
 </header>
