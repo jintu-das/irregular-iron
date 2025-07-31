@@ -8,6 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://stirring-custard-9ea6bb.netlify.app/",
+  site: "https://stirring-custard-9ea6bb.netlify.app",
+  trailingSlash: "never",
   integrations: [sitemap()],
 });
